@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Math Quiz Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container-md vh-99">
+        <h1 class="my-4 text-center text-light">Math Quiz Game</h1>
+        <div class="popup-box" id="popup-box">
+            <h3 class="text-center">Select Time & Difficulty</h3>
+            <select name="difficulty" id="difficulty">
+                <option value="Easy">Easy</option>
+                <option value="Normal">Normal</option>
+                <option value="Hard">Hard</option>
+            </select>
+            <select name="time" id="time">
+                <option value="60">1:00 Minutes</option>
+                <option value="180">3:00 Minutes</option>
+                <option value="300">5:00 Minutes</option>
+            </select>
+            <div class="btn btn-primary" id="startBtn">Start Game</div>
+        </div>
+        <div class="game-container" id="game-container">
+            <div class="header">
+                <span class="score">Score:<span id="score">00</span></span>
+                <span class="time">Time:<span id="time-left">0:00 Left</span></span>
+            </div>
+            <div class="digits">
+                <span id="operand1">0</span>
+                <span id="operator">+</span>
+                <span id="operand2">0</span>
+                <span id="operator">=</span>
+                <span id="ans">
+                    <input type="text" name="ans" id="answer" placeholder="Input Your Answer" autofocus>
+                </span>
+                <div id="dispAns">
+            </div>
+            </div>
+            <div class="buttons">
+                <div class="btn btn-primary" id="submitBtn">Submit</div>
+                <div class="btn btn-secondary" id="exitBtn">Exit</div>
+            </div>
+        </div>
+        <div class="result-container" id="result">
+            <h3 class="text-center">Final Result</h3>
+            <div class="result">
+                <div class="total time text-primary">
+                    <p>Time</p>
+                    <span id="totalTime">0:00 Min</span>
+                </div>
+                <div class="totalQuestion text-warning-emphasis">
+                    <p>Question</p>
+                    <span id="totalQuest">0</span>
+                </div>
+                <div class="correctQuestion text-success">
+                    <p>Correct</p>
+                    <span id="correct">0</span>
+                </div>
+                <div class="wrongQuestion text-danger">
+                    <p>Wrong</p>
+                    <span id="wrong">0</span>
+                </div>
+                <div class="totalScore">
+                    <p>Score</p>
+                    <span id="totalScore">0</span>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="retry">
+                    <img src="retry.png" alt="" title="retry" width="30" height="30" id="retry">
+                </div>
+                <div class="home">
+                    <img src="home.png" alt="" title="home" width="30" height="30" id="home">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
